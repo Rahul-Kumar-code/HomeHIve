@@ -21,7 +21,7 @@ app.use(storeRouter);
 app.use(hostRouter);
 app.use(errorsControllers.getError);
 
-const port = 3001;
-app.listen(port,()=>{
-  console.log(`server is running at http://localhost:${port}`);
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });
